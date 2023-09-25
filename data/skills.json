@@ -1,0 +1,467 @@
+[
+    {
+        "name": "Pintura",
+        "description": "Aprende a expresarte a través del arte de la pintura en lienzo.",
+        "category": "Arte y Creatividad"
+    },
+    {
+        "name": "Dibujo",
+        "description": "Desarrolla tus habilidades de dibujo, desde bocetos hasta ilustraciones detalladas.",
+        "category": "Arte y Creatividad"
+    },
+    {
+        "name": "Escultura",
+        "description": "Descubre el arte tridimensional a través de la escultura en diferentes materiales.",
+        "category": "Arte y Creatividad"
+    },
+    {
+        "name": "Ilustración Digital",
+        "description": "Aprende a crear ilustraciones digitales con herramientas digitales.",
+        "category": "Arte y Creatividad"
+    },
+    {
+        "name": "Dibujo de Cómics",
+        "description": "Aprende a crear tus propios cómics y novelas gráficas.",
+        "category": "Arte y Creatividad"
+    },
+    {
+        "name": "Diseño de Ropa",
+        "description": "Aprende a diseñar prendas de vestir desde cero, desde bocetos hasta patrones.",
+        "category": "Diseño de Moda"
+    },
+    {
+        "name": "Costura y Confección",
+        "description": "Domina las técnicas de costura y confección para dar vida a tus diseños.",
+        "category": "Diseño de Moda"
+    },
+    {
+        "name": "Diseño de accesorios",
+        "description": "Crea accesorios de moda, como bolsos, sombreros y joyería.",
+        "category": "Diseño de Moda"
+    },
+    {
+        "name": "Patronaje",
+        "description": "Desarrolla habilidades de patronaje para crear patrones precisos y ajustados.",
+        "category": "Diseño de Moda"
+    },
+    {
+        "name": "Historia de la Moda",
+        "description": "Sumérgete en la historia de la moda y las tendencias a lo largo del tiempo.",
+        "category": "Diseño de Moda"
+    },
+    {
+        "name": "Diseño de Calzado",
+        "description": "Diseña y crea tus propios zapatos y zapatillas de moda.",
+        "category": "Diseño de Moda"
+    },
+    {
+        "name": "Ilustración de Moda",
+        "description": "Desarrolla habilidades de ilustración para representar tus diseños de moda.",
+        "category": "Diseño de Moda"
+    },
+    {
+        "name": "Canto",
+        "description": "Mejora tu técnica vocal y desarrolla tus habilidades de canto.",
+        "category": "Música"
+    },
+    {
+        "name": "Producción Musical",
+        "description": "Explora el mundo de la producción musical, desde la grabación hasta la mezcla.",
+        "category": "Música"
+    },
+    {
+        "name": "Guitarra",
+        "description": "Aprende a tocar la guitarra y a componer tus propias canciones.",
+        "category": "Música"
+    },
+    {
+        "name": "Piano",
+        "description": "Domina el piano y la teoría musical para tocar piezas clásicas o crear música original.",
+        "category": "Música"
+    },
+    {
+        "name": "Violín",
+        "description": "Aprende a tocar el violín y a interpretar música clásica y contemporánea.",
+        "category": "Música"
+    },
+    {
+        "name": "Batería y Percusión",
+        "description": "Domina la batería y las percusiones para crear ritmos impactantes.",
+        "category": "Música"
+    },
+    {
+        "name": "Bajo Eléctrico",
+        "description": "Aprende a tocar el bajo eléctrico y contribuye al ritmo en bandas y proyectos musicales.",
+        "category": "Música"
+    },
+    {
+        "name": "Composición Musical",
+        "description": "Sumérgete en el arte de la composición musical y crea tus propias piezas originales.",
+        "category": "Música"
+    },
+    {
+        "name": "Teoría Musical",
+        "description": "Profundiza en la teoría musical, desde la lectura de partituras hasta la armonía y la composición.",
+        "category": "Música"
+    },
+    {
+        "name": "Inglés",
+        "description": "Perfecciona tu inglés, ya sea para comunicarte en viajes o fines profesionales.",
+        "category": "Idiomas"
+    },
+    {
+        "name": "Español",
+        "description": "Aprende español como lengua extranjera y sumérgete en la cultura hispanohablante.",
+        "category": "Idiomas"
+    },
+    {
+        "name": "Francés",
+        "description": "Desarrolla tus habilidades en francés, un idioma conocido por su belleza y elegancia.",
+        "category": "Idiomas"
+    },
+    {
+        "name": "Chino Mandarín",
+        "description": "Adquiere fluidez en uno de los idiomas más hablados del mundo.",
+        "category": "Idiomas"
+    },
+    {
+        "name": "Alemán",
+        "description": "Aprende alemán, un idioma importante en Europa y el mundo empresarial.",
+        "category": "Idiomas"
+    },
+    {
+        "name": "Italiano",
+        "description": "Domina el italiano, conocido por su belleza y cultura rica.",
+        "category": "Idiomas"
+    },
+    {
+        "name": "Portugués",
+        "description": "Desarrolla tus habilidades en portugués, el idioma oficial de Brasil y Portugal.",
+        "category": "Idiomas"
+    },
+    {
+        "name": "Japonés",
+        "description": "Adquiere fluidez en japonés, ideal para viajar y explorar la cultura japonesa.",
+        "category": "Idiomas"
+    },
+    {
+        "name": "Árabe",
+        "description": "Explora el árabe, un idioma con una rica historia y relevancia global.",
+        "category": "Idiomas"
+    },
+    {
+        "name": "Coreano",
+        "description": "Domina el coreano, que se ha vuelto cada vez más popular en la cultura pop.",
+        "category": "Idiomas"
+    },
+    {
+        "name": "LSE (Lengua de Signos Española)",
+        "description": "Aprende LSE para comunicarte con personas sordas o con discapacidades auditivas.",
+        "category": "Idiomas"
+    },
+    {
+        "name": "Hindi",
+        "description": " Desarrolla tus habilidades en hindi, el idioma oficial de la India y otros países.",
+        "category": "Idiomas"
+    },
+    {
+        "name": "Repostería",
+        "description": "Conviértete en un maestro pastelero y crea deliciosos postres.",
+        "category": "Cocina y Gastronomía"
+    },
+    {
+        "name": "Cocina Vegana",
+        "description": "Explora la cocina vegana y descubre recetas saludables y sabrosas.",
+        "category": "Cocina y Gastronomía"
+    },
+    {
+        "name": "Cocina Étnica",
+        "description": "Aprende a cocinar platos de diferentes culturas, desde sushi japonés hasta curry indio.",
+        "category": "Cocina y Gastronomía"
+    },
+    {
+        "name": "Cocktails y Mixología",
+        "description": "Conviértete en un experto en la preparación de cócteles y bebidas exóticas.",
+        "category": "Cocina y Gastronomía"
+    },
+    {
+        "name": "Maridaje de Vinos y Quesos",
+        "description": "Comprende cómo combinar vinos y quesos para degustaciones deliciosas.",
+        "category": "Cocina y Gastronomía"
+    },
+    {
+        "name": "Yoga",
+        "description": "Practica yoga para mejorar la flexibilidad y la relajación.",
+        "category": "Deportes y Fitness"
+    },
+    {
+        "name": "Entrenamiento en Casa",
+        "description": "Desarrolla un programa de ejercicios en casa para mantenerte en forma.",
+        "category": "Deportes y Fitness"
+    },
+    {
+        "name": "Pilates",
+        "description": "Practica Pilates para mejorar la fuerza del núcleo y la flexibilidad.",
+        "category": "Deportes y Fitness"
+    },
+    {
+        "name": "Entrenamiento de Resistencia",
+        "description": "Aprende a entrenar con pesas y mejorar la fuerza muscular.",
+        "category": "Deportes y Fitness"
+    },
+    {
+        "name": "Acondicionamiento Físico Fundamental",
+        "description": "Explora ejercicios funcionales para mejorar la resistencia y la movilidad.",
+        "category": "Deportes y Fitness"
+    },
+    {
+        "name": "Entrenamiento de Alta Intensidad (HIIT)",
+        "description": "Desarrolla rutinas de entrenamiento HIIT para quemar calorías y mejorar la condición física.",
+        "category": "Deportes y Fitness"
+    },
+    {
+        "name": "Programación en Python",
+        "description": "Domina el lenguaje de programación Python y desarrolla aplicaciones.",
+        "category": "Tecnología y Programación"
+    },
+    {
+        "name": "Desarrollo Web",
+        "description": "Aprende a crear sitios web y aplicaciones utilizando tecnologías como HTML, CSS y JavaScript.",
+        "category": "Tecnología y Programación"
+    },
+    {
+        "name": "Diseño Gráfico",
+        "description": "Mejora tus habilidades de diseño gráfico y crea proyectos visuales impactantes.",
+        "category": "Tecnología y Programación"
+    },
+    {
+        "name": "Inteligencia Artificial",
+        "description": "Explora el campo de la inteligencia artificial y el aprendizaje automático.",
+        "category": "Tecnología y Programación"
+    },
+    {
+        "name": "Mindfulness",
+        "description": "Practica técnicas de atención plena y meditación para reducir el estrés.",
+        "category": "Estilo de Vida y Bienestar"
+    },
+    {
+        "name": "Cocina saludable",
+        "description": "Descubre recetas y hábitos alimenticios para una vida más saludable.",
+        "category": "Estilo de Vida y Bienestar"
+    },
+    {
+        "name": "Feng Shui",
+        "description": "Aprende a equilibrar la energía en tu hogar a través del feng shui.",
+        "category": "Estilo de Vida y Bienestar"
+    },
+    {
+        "name": "Senderismo",
+        "description": "Planifica rutas de senderismo y comparte consejos para explorar la naturaleza.",
+        "category": "Viajes"
+    },
+    {
+        "name": "Viajes en Solitario",
+        "description": "Experiencias y consejos para viajar solo de manera segura.",
+        "category": "Viajes"
+    },
+    {
+        "name": "Exploración Urbana",
+        "description": "Descubre los secretos y lugares ocultos de las ciudades durante tus viajes.",
+        "category": "Viajes"
+    },
+    {
+        "name": "Filosofía",
+        "description": " Discute y reflexiona sobre cuestiones filosóficas y éticas fundamentales.",
+        "category": "Humanidades"
+    },
+    {
+        "name": "Antropología Cultural",
+        "description": "Descubre las culturas del mundo y su diversidad.",
+        "category": "Humanidades"
+    },
+    {
+        "name": "Latín Clásico",
+        "description": "Aprende la lengua y la gramática del latín clásico, utilizada en la antigua Roma.",
+        "category": "Humanidades"
+    },
+    {
+        "name": "Griego Antiguo",
+        "description": "Explora la lengua y la escritura del griego antiguo, utilizado en la antigua Grecia.",
+        "category": "Humanidades"
+    },
+    {
+        "name": "Literatura Clásica",
+        "description": "Sumérgete en las obras literarias escritas en latín y griego antiguos.",
+        "category": "Humanidades"
+    },
+    {
+        "name": "Mitología Clásica",
+        "description": "Descubre las historias y los mitos de la mitología grecolatina.",
+        "category": "Humanidades"
+    },
+    {
+        "name": "Arqueología",
+        "description": "Aprende sobre las excavaciones arqueológicas y la interpretación de hallazgos antiguos.",
+        "category": "Humanidades"
+    },
+    {
+        "name": "Ajedrez",
+        "description": "Juega y aprende estrategias de ajedrez con otros entusiastas.",
+        "category": "Juegos y Entretenimiento"
+    },
+    {
+        "name": "Videojuegos",
+        "description": "Comparte consejos y trucos sobre tus videojuegos favoritos.",
+        "category": "Juegos y Entretenimiento"
+    },
+    {
+        "name": "Magia",
+        "description": "Domina trucos de magia y sorprende a tus amigos con ilusiones.",
+        "category": "Juegos y Entretenimiento"
+    },
+    {
+        "name": "Juegos de Mesa",
+        "description": "Domina tus juegos de mesa favoritos y descubre nuevos desafíos con la ayuda de expertos en estrategia y diversión en grupo.",
+        "category": "Juegos y Entretenimiento"
+    },
+    {
+        "name": "Observación de Aves",
+        "description": "Aprende a identificar aves locales y observar su comportamiento.",
+        "category": "Naturaleza"
+    },
+    {
+        "name": "Jardinería orgánica",
+        "description": "Descubre técnicas para cultivar un jardín orgánico y sostenible.",
+        "category": "Naturaleza"
+    },
+    {
+        "name": "Senderismo y Orientación",
+        "description": "Desarrolla habilidades de senderismo y orientación en la naturaleza.",
+        "category": "Naturaleza"
+    },
+    {
+        "name": "Historia Antigua",
+        "description": " Explora civilizaciones antiguas, como la egipcia, griega o romana.",
+        "category": "Historia"
+    },
+    {
+        "name": "Historia del Arte",
+        "description": " Aprende sobre las diferentes épocas artísticas y estilos de pintura.",
+        "category": "Historia"
+    },
+    {
+        "name": "Genealogía",
+        "description": "Investiga y rastrea la historia de tu propia familia y antepasados.",
+        "category": "Historia"
+    },
+    {
+        "name": "Historia de la Segunda Guerra Mundial",
+        "description": " Profundiza en uno de los períodos más importantes del siglo XX.",
+        "category": "Historia"
+    },
+    {
+        "name": "Fotografía de Retrato",
+        "description": "Aprende a capturar retratos impresionantes de personas.",
+        "category": "Fotografía"
+    },
+    {
+        "name": "Fotografía de Paisajes",
+        "description": "Desarrolla técnicas para fotografiar hermosos paisajes naturales.",
+        "category": "Fotografía"
+    },
+    {
+        "name": "Fotografía Nocturna",
+        "description": "Domina las técnicas para capturar imágenes impresionantes en condiciones de poca luz.",
+        "category": "Fotografía"
+    },
+    {
+        "name": "Fotografía Macro",
+        "description": " Descubre el mundo de los detalles a través de la fotografía macro.",
+        "category": "Fotografía"
+    },
+    {
+        "name": "Edición de Fotos",
+        "description": "Aprende a editar y retocar fotos utilizando software de edición.",
+        "category": "Fotografía"
+    },
+    {
+        "name": "Edición de Vídeo",
+        "description": "Domina la edición de video para crear proyectos cinematográficos.",
+        "category": "Vídeo"
+    },
+    {
+        "name": "Narración Visual",
+        "description": "Comprende la narración visual y cómo contar historias a través del video.",
+        "category": "Vídeo"
+    },
+    {
+        "name": "Efectos Especiales",
+        "description": "Explora técnicas de efectos especiales en el cine y la postproducción.",
+        "category": "Vídeo"
+    },
+    {
+        "name": "Transmisión en Vivo",
+        "description": "Descubre cómo transmitir en vivo y crear contenido en tiempo real.",
+        "category": "Vídeo"
+    },
+    {
+        "name": "Producción de Vídeo",
+        "description": "Aprende a crear videos de calidad profesional.",
+        "category": "Vídeo"
+    },
+    {
+        "name": "Emprendimiento",
+        "description": "Aprende a lanzar y gestionar tu propio negocio.",
+        "category": "Emprendimiento y Negocios"
+    },
+    {
+        "name": "Marketing Digital",
+        "description": "Descubre estrategias de marketing en línea y redes sociales.",
+        "category": "Emprendimiento y Negocios"
+    },
+    {
+        "name": "Finanzas Empresariales",
+        "description": "Comprende la gestión financiera y la inversión empresarial.",
+        "category": "Emprendimiento y Negocios"
+    },
+    {
+        "name": "Desarrollo de Habilidades de Liderazgo",
+        "description": "Mejora tus habilidades de liderazgo y gestión de equipos.",
+        "category": "Emprendimiento y Negocios"
+    },
+    {
+        "name": "Desarrollo de Aplicaciones Móviles",
+        "description": "Aprende a crear aplicaciones para dispositivos móviles.",
+        "category": "Ciencias de la Computación"
+    },
+    {
+        "name": "Seguridad Informática",
+        "description": "Domina las técnicas para proteger sistemas y datos.",
+        "category": "Ciencias de la Computación"
+    },
+    {
+        "name": "Desarrollo de Videojuegos",
+        "description": "Descubre cómo crear tus propios videojuegos.",
+        "category": "Ciencias de la Computación"
+    },
+    {
+        "name": "Psicología y Terapia",
+        "description": "Aprende sobre la psicología y las terapias de apoyo.",
+        "category": "Ciencias de la Computación"
+    },
+    {
+        "name": "Nutrición y Dietética",
+        "description": "Descubre cómo llevar una alimentación equilibrada y saludable.",
+        "category": "Ciencias de la Salud"
+    },
+    {
+        "name": "Fisioterapia y Rehabilitación",
+        "description": "Aprende técnicas de fisioterapia y recuperación física.",
+        "category": "Ciencias de la Salud"
+    },
+    {
+        "name": "Salud Mental",
+        "description": "Aborda temas de salud mental y bienestar emocional.",
+        "category": "Ciencias de la Salud"
+    }
+]

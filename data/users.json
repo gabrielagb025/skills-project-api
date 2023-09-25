@@ -1,0 +1,202 @@
+[
+    {
+        "name": "Harry Potter",
+        "email": "harry@hogwarts.es",
+        "password": "123456789",
+        "avatar": "https://media.revistavanityfair.es/photos/60e84a97bb9e71d46fd8d1f4/1:1/w_916,h_916,c_limit/39713.jpg",
+        "description": "Lorem ipsum dolor sit amet",
+        "city": "Madrid",
+        "teachSkills": ["Ilustración de Moda", "Guitarra"],
+        "learnSkills": ["Composición Musical", "Inglés"]
+    }, 
+    {
+        "name": "Hermione Granger",
+        "email": "hermione@hogwarts.es",
+        "password": "123456789",
+        "avatar": "https://static.wikia.nocookie.net/warnerbros/images/3/3e/Hermione.jpg/revision/latest/scale-to-width-down/1200?cb=20120729103114&path-prefix=es",
+        "description": "Lorem ipsum dolor sit amet",
+        "city": "Barcelona",
+        "teachSkills": ["Inglés", "Dibujo"],
+        "learnSkills": ["Cocina Vegana", "Fotografía de Retrato"]
+    }, 
+    {
+        "name": "Ron Weasley",
+        "email": "ron@hogwarts.es",
+        "password": "123456789",
+        "avatar": "https://upload.wikimedia.org/wikipedia/en/5/5e/Ron_Weasley_poster.jpg",
+        "description": "Lorem ipsum dolor sit amet",
+        "city": "Sevilla",
+        "teachSkills": ["Ajedrez", "Cocina saludable"],
+        "learnSkills": ["Ilustración de Moda", "Escultura"]
+    }, 
+    {
+        "name": "Draco Malfoy",
+        "email": "draco@hogwarts.es",
+        "password": "123456789",
+        "avatar": "https://i.insider.com/632c6766f576c60018fc3443?width=877&format=jpeg",
+        "description": "Lorem ipsum dolor sit amet",
+        "city": "Bilbao",
+        "teachSkills": ["Francés", "Canto"],
+        "learnSkills": ["Marketing Digital", "Desarrollo de Aplicaciones Móviles"]
+    }, 
+    {
+        "name": "Luna Lovegood",
+        "email": "luna@hogwarts.es",
+        "password": "123456789",
+        "avatar": "https://hips.hearstapps.com/hmg-prod/images/luna-lovegood-evanna-lynch-3-1536657040.jpg",
+        "description": "Lorem ipsum dolor sit amet",
+        "city": "Palma",
+        "teachSkills": ["Arqueología", "Magia"],
+        "learnSkills": ["Yoga", "Fotografía Nocturna"]
+    }, 
+    {
+        "name": "Albus Dumbledore",
+        "email": "albus@hogwarts.es",
+        "password": "123456789",
+        "avatar": "https://sm.ign.com/ign_latam/screenshot/default/albus_f7cu.jpg",
+        "description": "Lorem ipsum dolor sit amet",
+        "city": "Barcelona",
+        "teachSkills": ["Filosofía", "Historia del Arte"],
+        "learnSkills": ["Producción Musical", "Emprendimiento"]
+    }, 
+    {
+        "name": "Minerva McGonagall",
+        "email": "minerva@hogwarts.es",
+        "password": "123456789",
+        "avatar": "https://static.wikia.nocookie.net/harrypotter/images/6/65/ProfessorMcGonagall-HBP.jpg/revision/latest?cb=20100612114856",
+        "description": "Lorem ipsum dolor sit amet",
+        "city": "Valencia",
+        "teachSkills": ["Latín Clásico", "Violín"],
+        "learnSkills": ["Senderismo", "Fotografía de Paisajes"]
+    }, 
+    {
+        "name": "Severus Snape",
+        "email": "severus@hogwarts.es",
+        "password": "123456789",
+        "avatar": "https://media.glamour.es/photos/616f9ac038abdad04f45538b/master/w_1600%2Cc_limit/605146.jpg",
+        "description": "Lorem ipsum dolor sit amet",
+        "city": "Madrid",
+        "teachSkills": ["Pintura", "Dibujo"],
+        "learnSkills": ["Cocina saludable", "Mindfulness"]
+    }, 
+    {
+        "name": "Sirius Black",
+        "email": "sirius@hogwarts.es",
+        "password": "123456789",
+        "avatar": "https://elcomercio.pe/resizer/H2qETszUtCsocKuQaPk47oYye9M=/1200x1200/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/HC57PGWU7VAG5JG3JL7ASB2V2E.jpg",
+        "description": "Lorem ipsum dolor sit amet",
+        "city": "Zaragoza",
+        "teachSkills": ["Escultura", "Ilustración Digital"],
+        "learnSkills": ["Historia de la Segunda Guerra Mundial", "Senderismo"]
+    }, 
+    {
+        "name": "Neville Longbottom",
+        "email": "neville@hogwarts.es",
+        "password": "123456789",
+        "avatar": "https://depor.com/resizer/_avkiGybR2-GBzZWKRzoFfsZcDw=/1200x1200/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/H6NR4GE24VBFLCUAIFYSJGCRRQ.jpg",
+        "description": "Lorem ipsum dolor sit amet",
+        "city": "Valencia",
+        "teachSkills": ["Yoga", "Diseño de Ropa"],
+        "learnSkills": ["Dibujo", "Fotografía de Paisajes"]
+    }, 
+    {
+        "name": "Rubeus Hagrid",
+        "email": "rubeus@hogwarts.es",
+        "password": "123456789",
+        "avatar": "https://1.bp.blogspot.com/-12F4NJLiVN4/UxeUEd-_LgI/AAAAAAAAAMM/TNtZkifG7Ik/s1600/rubeus-hagrid.jpg",
+        "description": "Lorem ipsum dolor sit amet",
+        "city": "Pamplona",
+        "teachSkills": ["Canto", "Producción Musical"],
+        "learnSkills": ["Senderismo y Orientación", "Fotografía Macro"]
+    }, 
+    {
+        "name": "Ginny Weasley",
+        "email": "ginny@hogwarts.es",
+        "password": "123456789",
+        "avatar": "https://static.wikia.nocookie.net/esharrypotter/images/e/ea/DH-ginevra-ginny-weasley-19126276-605-807.jpg/revision/latest?cb=20171221181839",
+        "description": "Lorem ipsum dolor sit amet",
+        "city": "Barcelona",
+        "teachSkills": ["Diseño de accesorios", "Patronaje"],
+        "learnSkills": ["Edición de Fotos", "Transmisión en Vivo"]
+    }, 
+    {
+        "name": "Bellatrix Lestrange",
+        "email": "bellatrix@hogwarts.es",
+        "password": "123456789",
+        "avatar": "https://pm1.aminoapps.com/6210/c997a43ce1af464a6e8000b8387e29c73bc78bad_00.jpg",
+        "description": "Lorem ipsum dolor sit amet",
+        "city": "Sevilla",
+        "teachSkills": ["Senderismo y Orientación", "Batería y Percusión"],
+        "learnSkills": ["Emprendimiento", "Marketing Digital"]
+    }, 
+    {
+        "name": "Lord Voldemort",
+        "email": "voldemort@hogwarts.es",
+        "password": "123456789",
+        "avatar": "https://www.cinemascomics.com/wp-content/uploads/2022/04/Lord-Voldemort-portada-960x720.jpg",
+        "description": "Lorem ipsum dolor sit amet",
+        "city": "Palma",
+        "teachSkills": ["Composición Musical", "Teoría Musical"],
+        "learnSkills": ["Desarrollo de Aplicaciones Móviles", "Francés"]
+    }, 
+    {
+        "name": "Cedric Diggory",
+        "email": "cedric@hogwarts.es",
+        "password": "123456789",
+        "avatar": "https://static.wikia.nocookie.net/esharrypotter/images/c/cf/Cedric-Diggory-promo-pics-hufflepuff-28197938-365-520.jpg/revision/latest?cb=20150523213517",
+        "description": "Lorem ipsum dolor sit amet",
+        "city": "Córdoba",
+        "teachSkills": ["Bajo Eléctrico", "Desarrollo de Videojuegos"],
+        "learnSkills": ["Psicología y Terapia", "Nutrición y Dietética"]
+    }, 
+    {
+        "name": "Dobby",
+        "email": "dobby@hogwarts.es",
+        "password": "123456789",
+        "avatar": "https://images.ctfassets.net/usf1vwtuqyxm/747HAr2uJS1Wat6CVOEzbH/0003d863999f6644e0b1e4d5cd5beb62/Dobby_3_1800x1248.png",
+        "description": "Lorem ipsum dolor sit amet",
+        "city": "Sevilla",
+        "teachSkills": ["Arqueología", "Ajedrez"],
+        "learnSkills": ["Fisioterapia y Rehabilitación", "Salud Mental"]
+    }, 
+    {
+        "name": "Remus Lupin",
+        "email": "remus@hogwarts.es",
+        "password": "123456789",
+        "avatar": "https://pm1.aminoapps.com/6231/9549bae748fac5eb64d3ee5b1d119d41acf98422_00.jpg",
+        "description": "Lorem ipsum dolor sit amet",
+        "city": "Pamplona",
+        "teachSkills": ["Historia Antigua", "Latín Clásico"],
+        "learnSkills": ["Edición de Vídeo", "Fotografía Nocturna"]
+    }, 
+    {
+        "name": "Fred Weasley",
+        "email": "fred@hogwarts.es",
+        "password": "123456789",
+        "avatar": "https://static.wikia.nocookie.net/esharrypotter/images/1/18/PHELPS2-1.jpg/revision/latest?cb=20150523213445",
+        "description": "Lorem ipsum dolor sit amet",
+        "city": "Barcelona",
+        "teachSkills": ["Cocktails y Mixología", "Juegos de Mesa"],
+        "learnSkills": ["Cocina Étnica", "Marketing Digital"]
+    }, 
+    {
+        "name": "George Weasley",
+        "email": "george@hogwarts.es",
+        "password": "123456789",
+        "avatar": "https://www.ecured.cu/images/2/28/GeorgeW.PNG",
+        "description": "Lorem ipsum dolor sit amet",
+        "city": "Barcelona",
+        "teachSkills": ["Magia", "Videojuegos"],
+        "learnSkills": ["Emprendimiento", "Desarrollo de Videojuegos"]
+    }, 
+    {
+        "name": "Nymphadora Tonks",
+        "email": "tonks@hogwarts.es",
+        "password": "123456789",
+        "avatar": "https://pm1.aminoapps.com/6199/4af7943cfec9c1d7f9ca1661656df3124eb315f6_00.jpg",
+        "description": "Lorem ipsum dolor sit amet",
+        "city": "Pamplona",
+        "teachSkills": ["Arqueología", "Observación de Aves"],
+        "learnSkills": ["Cocina Vegana", "Mindfulness"]
+    }
+]

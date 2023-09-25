@@ -26,7 +26,22 @@ const userSchema = new mongoose.Schema(
         avatar: {
             type: String,
             default: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/1200px-Default_pfp.svg.png"
-        }
+        },
+        description: {
+            type: String,
+            maxLength: [300, 'La descripción debe tener máximo 300 caracteres.']
+        },
+        city: {
+            type: String
+        },
+        teachSkills: [{
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Skill'
+        }],
+        learnSkills: [{
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Skill'
+        }]
     },
     {
         timestamps: true,
