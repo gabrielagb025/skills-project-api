@@ -18,16 +18,38 @@ mongoose.connection.once('open', () => {
         createdSkills.forEach((skill) => {
             console.log(`Skill ${skill.name} has been created.`)
         })
-        return User.create(USERS)
+        
+        const userPromises = USERS.map((user) => {
+
+            const teachIds = user.teachSkills.map((skillName) => {
+                const skill = createdSkills.find((s) => s.name === skillName)
+                return skill._id
+            })
+
+            const learnIds = user.learnSkills.map((skillName) => {
+                const skill = createdSkills.find((s) => s.name === skillName)
+                return skill._id
+            })
+
+            const modifiedUser = {
+                ...user,
+                teachSkills: teachIds,
+                learnSkills: learnIds
+            }
+
+            return User.create(modifiedUser)
+        })
+
+        return Promise.all(userPromises)
     })
     .then((createdUsers) => {
         createdUsers.forEach((user) => {
-            console.log(`The user ${user.name} has been created`)
+            console.log(`The user ${user.name} has been created.`)
         })
         return mongoose.connection.close();
     })
     .then(() => {
-        console.log('Connection closed.')
+        console.log('Connectilon cosed.')
     })
     .catch((err) => {
         console.log(err)
