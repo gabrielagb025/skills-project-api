@@ -23,3 +23,18 @@ module.exports.getUsers = (req, res, next) => {
         })
         .catch(next)
 }
+
+module.exports.getFilteredUsers = (req, res, next) => {
+    
+}
+
+module.exports.getUserDetail = (req, res, next) => {
+    const { id } = req.params;
+
+    User.findById(id)
+    .populate('teachSkills learnSkills')
+    .then((user) => {
+        res.json(user)
+    })
+    .catch(next)
+}

@@ -19,6 +19,7 @@ router.post('/login', authController.login);
 /* USERS */
 router.get('/users/me', authMiddleware.isAuthenticated, usersController.getCurrentUser)
 router.get('/users', usersController.getUsers);
+router.get('/user/detail/:id', usersController.getUserDetail)
 
 /* SKILLS */
 router.get('/skills', skillController.getSkills)
