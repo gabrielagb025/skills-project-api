@@ -22,9 +22,18 @@ module.exports.deleteRating = (req, res, next) => {
     const { id } = req.params;
     Rating.findByIdAndDelete(id)
         .then((rating) => {
-            res.json({ message: 'Rating deleted'})
+            console.log('rating borrado')
+            res.status(204).json({status: "ok"})
         })
-        .catch((err) => {
-            console.log(err)
+        .catch(next)
+}
+
+module.exports.listRatings = (req, res, next) => {
+    const { id } = req.params;
+    Rating.find({user: id})
+    .populate('currentUser')
+        .then((ratings) => {
+            res.json(ratings)
         })
+        .catch(next)
 }

@@ -12,7 +12,7 @@ const ratingSchema = new mongoose.Schema({
     message: {
         type: String,
         required: true,
-        required: "Comment is required",
+        required: "Rating is required",
     },
     date: {
         type: Date,
@@ -23,7 +23,6 @@ const ratingSchema = new mongoose.Schema({
         required: true,
         min: 1,
         max: 5,
-        default: 0,
     }
 },
 {

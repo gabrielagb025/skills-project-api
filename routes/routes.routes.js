@@ -26,8 +26,10 @@ router.get('/user/detail/:id', usersController.getUserDetail);
 router.get('/skills', skillController.getSkills)
 
 /* RATINGS */
+router.get('/rating/list/:id', authMiddleware.isAuthenticated, ratingController.listRatings);
 router.post('/rating/create/:id', authMiddleware.isAuthenticated, ratingController.createRating);
 router.delete('/rating/delete/:id', authMiddleware.isAuthenticated, ratingController.deleteRating);
+
 
 
 module.exports = router;
