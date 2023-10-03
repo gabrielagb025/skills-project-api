@@ -17,7 +17,7 @@ router.post('/login', authController.login);
 
 /* USERS */
 router.get('/users/me', authMiddleware.isAuthenticated, usersController.getCurrentUser);
-router.patch('/currentUser/edit', authMiddleware.isAuthenticated, usersController.editUser);
+router.patch('/currentUser/edit', authMiddleware.isAuthenticated, upload.single('avatar'), usersController.editUser);
 router.get('/users', usersController.getUsers);
 router.get('/users/filtered', authMiddleware.isAuthenticated, usersController.getFilteredUsers);
 router.get('/user/detail/:id', usersController.getUserDetail);
