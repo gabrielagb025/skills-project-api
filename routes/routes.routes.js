@@ -5,6 +5,7 @@ const authMiddleware = require('../middlewares/auth.middleware');
 const usersController = require('../controllers/users.controller');
 const skillController = require('../controllers/skill.controller');
 const ratingController = require('../controllers/rating.controller');
+const postController = require('../controllers/post.controller');
 
 /* MISC */
 router.get('/', (req, res, next) => {
@@ -29,6 +30,9 @@ router.get('/skills', skillController.getSkills)
 router.get('/rating/list/:id', authMiddleware.isAuthenticated, ratingController.listRatings);
 router.post('/rating/create/:id', authMiddleware.isAuthenticated, ratingController.createRating);
 router.delete('/rating/delete/:id', authMiddleware.isAuthenticated, ratingController.deleteRating);
+
+/* POSTS */
+router.post('/post/create', authMiddleware.isAuthenticated, postController.createPost);
 
 
 

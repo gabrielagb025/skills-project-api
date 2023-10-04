@@ -11,8 +11,7 @@ const ratingSchema = new mongoose.Schema({
     },
     message: {
         type: String,
-        required: true,
-        required: "Rating is required",
+        required: [true, 'El comentario es requerido.'],
     },
     date: {
         type: Date,
