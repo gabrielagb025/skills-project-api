@@ -93,6 +93,54 @@ module.exports.getFilteredUsers = (req, res, next) => {
         });
 };
 
+module.exports.getFilteredUsersAndCurrentUser = (req, res, next) => {
+    User.findById(req.currentUser)
+        .populate('teachSkills')
+        .populate('learnSkills')
+        .lean()
+        .then((currentUser) => {
+            if (!currentUser) {
+                return res.status(404).json({ message: 'Usuario no encontrado' });
+            }
+
+            const teachSkillCategories = currentUser.teachSkills.map(skill => skill.category);
+            const learnSkillCategories = currentUser.learnSkills.map(skill => skill.category);
+
+            console.log(teachSkillCategories)
+            console.log(learnSkillCategories)
+
+            // Utiliza Promise.all para esperar a que ambas consultas se completen
+            Promise.all([
+                Skill.find({ 'category': { $in: teachSkillCategories } }),
+                Skill.find({ 'category': { $in: learnSkillCategories} })
+            ])
+                .then(([skillsToLearn, skillsToTeach]) => {
+                    console.log(skillsToLearn)
+                    console.log(skillsToTeach)
+                    return User.find({
+                        $or: [
+                            { 'learnSkills': { $in: skillsToLearn.map(skill => skill._id) } },
+                            { 'teachSkills': { $in: skillsToTeach.map(skill => skill._id) } },
+                        ],
+                        _id: { $ne: currentUser._id },
+                    })
+                    .populate('teachSkills learnSkills');
+                })
+                .then((matchedUsers) => {
+                    console.log(matchedUsers)
+                    res.status(200).json( matchedUsers );
+                })
+                .catch((error) => {
+                    console.log(error);
+                    next(error);
+                });
+        })
+        .catch((error) => {
+            console.log(error);
+            next(error);
+        });
+};
+
 module.exports.getUserDetail = (req, res, next) => {
     const { id } = req.params;
 

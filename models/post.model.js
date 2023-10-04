@@ -10,9 +10,9 @@ const postSchema = new mongoose.Schema({
         required: [true, 'Debes escribir algún mensaje.'],
         maxlength: [300, 'El mensaje no debe tener más de 300 caracteres.']
     },
-    multimedia: {
+    multimedia: [{
         type: String
-    },
+    }],
     date: {
         type: Date,
         default: Date.now,

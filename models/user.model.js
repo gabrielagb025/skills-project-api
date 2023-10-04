@@ -80,5 +80,12 @@ userSchema.methods.checkPassword = function (passwordToCheck) {
     return bcrypt.compare(passwordToCheck, this.password);
 }
 
+userSchema.virtual("posts", {
+    ref:"Post",
+    localField: "_id",
+    foreignField: "user",
+    justOne: false,
+  });
+
 const User = mongoose.model('User', userSchema);
 module.exports = User;

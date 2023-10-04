@@ -21,6 +21,7 @@ router.get('/users/me', authMiddleware.isAuthenticated, usersController.getCurre
 router.patch('/currentUser/edit', authMiddleware.isAuthenticated, upload.single('avatar'), usersController.editUser);
 router.get('/users', usersController.getUsers);
 router.get('/users/filtered', authMiddleware.isAuthenticated, usersController.getFilteredUsers);
+router.get('/users/filtered/me', authMiddleware.isAuthenticated, usersController.getFilteredUsersAndCurrentUser);
 router.get('/user/detail/:id', usersController.getUserDetail);
 
 /* SKILLS */
@@ -32,7 +33,7 @@ router.post('/rating/create/:id', authMiddleware.isAuthenticated, ratingControll
 router.delete('/rating/delete/:id', authMiddleware.isAuthenticated, ratingController.deleteRating);
 
 /* POSTS */
-router.post('/post/create', authMiddleware.isAuthenticated, postController.createPost);
+router.post('/post/create', authMiddleware.isAuthenticated, upload.array('multimedia'), postController.createPost);
 
 
 
