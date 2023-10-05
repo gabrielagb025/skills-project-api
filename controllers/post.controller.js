@@ -15,6 +15,3 @@ module.exports.createPost = (req, res, next) => {
         .catch(next)
 }
 
-module.exports.getCurrentUserPosts = (req, res, next) => {
-    
-}

@@ -5,7 +5,7 @@ const Skill = require('../models/skill.model');
 
 module.exports.getCurrentUser = (req, res, next) => {
     User.findById(req.currentUser)
-        .populate('teachSkills learnSkills')
+        .populate('teachSkills learnSkills posts')
         .then((user) => {
             if (!user) {
                 next(createHttpError(StatusCodes.NOT_FOUND, 'Usuario no encontrado'))
@@ -122,9 +122,9 @@ module.exports.getFilteredUsersAndCurrentUser = (req, res, next) => {
                             { 'learnSkills': { $in: skillsToLearn.map(skill => skill._id) } },
                             { 'teachSkills': { $in: skillsToTeach.map(skill => skill._id) } },
                         ],
-                        _id: { $ne: currentUser._id },
+                        _id: { $ne: currentUser.id },
                     })
-                    .populate('teachSkills learnSkills');
+                    .populate('teachSkills learnSkills posts');
                 })
                 .then((matchedUsers) => {
                     console.log(matchedUsers)
@@ -145,7 +145,7 @@ module.exports.getUserDetail = (req, res, next) => {
     const { id } = req.params;
 
     User.findById(id)
-        .populate('teachSkills learnSkills')
+        .populate('teachSkills learnSkills posts')
         .then((user) => {
             res.json(user)
         })
