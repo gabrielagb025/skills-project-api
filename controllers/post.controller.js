@@ -15,3 +15,22 @@ module.exports.createPost = (req, res, next) => {
         .catch(next)
 }
 
+module.exports.deletePost = (req, res, next) => {
+    const { id } = req.params;
+    Post.findByIdAndDelete(id)
+        .then((rating) => {
+            console.log('post borrado')
+            res.status(204).json({status: "ok"})
+        })
+        .catch(next)
+}
+
+module.exports.getCurrentUserPosts = (req, res, next) => {
+    const user = req.currentUser
+    Post.find({ user: user })
+        .then((posts) => {
+            res.json(posts)
+        })
+        .catch(next)
+}
+

@@ -33,8 +33,9 @@ router.post('/rating/create/:id', authMiddleware.isAuthenticated, ratingControll
 router.delete('/rating/delete/:id', authMiddleware.isAuthenticated, ratingController.deleteRating);
 
 /* POSTS */
+router.get('/post/list', authMiddleware.isAuthenticated, postController.getCurrentUserPosts);
 router.post('/post/create', authMiddleware.isAuthenticated, upload.array('multimedia'), postController.createPost);
-
+router.delete('/post/delete/:id', authMiddleware.isAuthenticated, postController.deletePost);
 
 
 module.exports = router;
