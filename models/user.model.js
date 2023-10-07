@@ -85,7 +85,14 @@ userSchema.virtual("posts", {
     localField: "_id",
     foreignField: "user",
     justOne: false,
-  });
+});
+
+userSchema.virtual("friendRequest", {
+    ref:"FriendRequest",
+    localField: "_id",
+    foreignField: "user",
+    justOne: false,
+});
 
 const User = mongoose.model('User', userSchema);
 module.exports = User;

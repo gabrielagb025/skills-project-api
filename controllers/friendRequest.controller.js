@@ -62,6 +62,7 @@ module.exports.getFriends = (req, res, next) => {
         }, []);
 
         return User.find({_id: { $in: friendIds } })
+        .populate('teachSkills learnSkills')
         .then((friends) => {
             res.json(friends)
         })
@@ -70,5 +71,20 @@ module.exports.getFriends = (req, res, next) => {
         console.log(err)
         res.status(500).json({ error: 'Error al obtener los usuarios.' });
     })
-    
+}
+
+module.exports.getPendingFriendRequests = (req, res, next) => {
+    FriendRequest.find({
+        $or: [
+          { userSend: req.currentUser },
+          { userReceive: req.currentUser }
+        ],
+        status: 'pending'
+    })
+    .then((pendingRequests) => {
+        res.json(pendingRequests)
+    })
+    .catch((err) => {
+        res.status(500).json({ error: 'Error al obtener las solicitudes pendientes.' });2
+    })
 }
