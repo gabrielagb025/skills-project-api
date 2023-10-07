@@ -85,6 +85,18 @@ module.exports.getPendingFriendRequests = (req, res, next) => {
         res.json(pendingRequests)
     })
     .catch((err) => {
-        res.status(500).json({ error: 'Error al obtener las solicitudes pendientes.' });2
+        res.status(500).json({ error: 'Error al obtener las solicitudes pendientes.' });
     })
+}
+
+module.exports.cancelFriendRequest = (req, res, next) => {
+    const { id } = req.params;
+
+    FriendRequest.findByIdAndDelete(id)
+        .then((friendRequest) => {
+            res.status(204).json({status: "ok"})
+        })
+        .catch((err) => {
+            res.status(500).json({ error: 'Error al cancelar la conexión.' });
+        })
 }
