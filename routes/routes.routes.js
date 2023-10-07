@@ -6,6 +6,7 @@ const usersController = require('../controllers/users.controller');
 const skillController = require('../controllers/skill.controller');
 const ratingController = require('../controllers/rating.controller');
 const postController = require('../controllers/post.controller');
+const friendRequestController = require('../controllers/friendRequest.controller')
 
 /* MISC */
 router.get('/', (req, res, next) => {
@@ -38,5 +39,8 @@ router.post('/post/create', authMiddleware.isAuthenticated, upload.array('multim
 router.patch('/post/edit/:id', authMiddleware.isAuthenticated, upload.array('multimedia'), postController.editPost);
 router.delete('/post/delete/:id', authMiddleware.isAuthenticated, postController.deletePost);
 
+/* FRIEND REQUESTS */
+router.post('/friend-request/:id', authMiddleware.isAuthenticated, friendRequestController.sendFriendRequest);
+router.get('/friend-requests', authMiddleware.isAuthenticated, friendRequestController.getFriendRequests);
 
 module.exports = router;

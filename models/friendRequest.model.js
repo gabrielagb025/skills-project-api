@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const matchSchema = new mongoose.Schema({
+const friendRequestSchema = new mongoose.Schema({
     userSend: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
@@ -10,11 +10,13 @@ const matchSchema = new mongoose.Schema({
         ref: 'User'
     },
     message: {
-        type: String
+        type: String,
+        default: '!Hola! Me gustaría conectar contigo.'
     },
-    active: {
-        type: Boolean,
-        default: false
+    status: {
+        type: String,
+        enum: ['pending', 'accepted', 'rejected'],
+        default: 'pending' 
     }
 },
 {
@@ -30,6 +32,6 @@ const matchSchema = new mongoose.Schema({
     }
 });
 
-const Match = mongoose.model('Match', matchSchema);
+const FriendRequest = mongoose.model('FriendRequest', friendRequestSchema);
 
-module.exports = Match;
+module.exports = FriendRequest;
