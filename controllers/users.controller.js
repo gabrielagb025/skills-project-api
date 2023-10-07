@@ -104,3 +104,4 @@ module.exports.getUserDetail = (req, res, next) => {
         })
         .catch(next)
 }
+

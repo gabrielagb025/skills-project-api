@@ -43,5 +43,6 @@ router.delete('/post/delete/:id', authMiddleware.isAuthenticated, postController
 router.post('/friend-request/:id', authMiddleware.isAuthenticated, friendRequestController.sendFriendRequest);
 router.get('/friend-requests', authMiddleware.isAuthenticated, friendRequestController.getFriendRequests);
 router.patch('/friend-request/edit/:id', authMiddleware.isAuthenticated, friendRequestController.respondToFriendRequest);
+router.get('/friends', authMiddleware.isAuthenticated, friendRequestController.getFriends);
 
 module.exports = router;

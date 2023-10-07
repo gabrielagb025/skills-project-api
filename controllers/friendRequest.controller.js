@@ -1,4 +1,5 @@
 const FriendRequest = require('../models/friendRequest.model');
+const User = require('../models/user.model');
 
 module.exports.sendFriendRequest = (req, res, next) => {
     const friendRequestData = {
@@ -33,9 +34,11 @@ module.exports.getFriendRequests = (req, res, next) => {
 
 module.exports.respondToFriendRequest = (req, res, next) => {
     const { id } = req.params;
-    const { action } = req.body;
+    const { status } = req.body;
 
-    FriendRequest.findByIdAndUpdate(id, { status: action }, { new: true })
+    console.log(req.body)
+
+    FriendRequest.findByIdAndUpdate(id, { status }, { new: true })
     .then((updatedRequest) => {
         console.log('actualizado!')
         res.json(updatedRequest)
@@ -44,4 +47,28 @@ module.exports.respondToFriendRequest = (req, res, next) => {
         console.log(err)
         res.status(500).json({ error: 'Error al actualizar la solicitud de amistad' });
     })
+}
+
+module.exports.getFriends = (req, res, next) => {
+    FriendRequest.find({ $or: [{ userSend: req.currentUser }, { userReceive: req.currentUser }], status: 'accepted' })
+    .then((friendRequests) => {
+        const friendIds = friendRequests.reduce((ids, request) => {
+            if (request.userSend.toString() === req.currentUser) {
+                ids.push(request.userReceive);
+            } else {
+                ids.push(request.userSend);
+            }
+            return ids;
+        }, []);
+
+        return User.find({_id: { $in: friendIds } })
+        .then((friends) => {
+            res.json(friends)
+        })
+    })
+    .catch((err) => {
+        console.log(err)
+        res.status(500).json({ error: 'Error al obtener los usuarios.' });
+    })
+    
 }
