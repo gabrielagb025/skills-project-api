@@ -46,5 +46,6 @@ router.get('/friends', authMiddleware.isAuthenticated, friendRequestController.g
 router.get('/friend-requests/pending', authMiddleware.isAuthenticated, friendRequestController.getPendingFriendRequests);
 router.delete('/friend-request/delete/:id', authMiddleware.isAuthenticated, friendRequestController.cancelFriendRequest);
 router.post('/friend-request/:id', authMiddleware.isAuthenticated, friendRequestController.sendFriendRequest);
+router.get('/friend-request/accepted/:id', authMiddleware.isAuthenticated, friendRequestController.getAcceptedFriendRequest);
 
 module.exports = router;
