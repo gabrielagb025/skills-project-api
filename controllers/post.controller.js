@@ -70,25 +70,23 @@ module.exports.getTimelinePosts = (req, res, next) => {
             // Utiliza Promise.all para esperar a que ambas consultas se completen
             Promise.all([
                 Skill.find({ 'category': { $in: teachSkillCategories } }),
-                Skill.find({ 'category': { $in: learnSkillCategories} })
+                Skill.find({ 'category': { $in: learnSkillCategories } })
             ])
                 .then(([skillsToLearn, skillsToTeach]) => {
                     return User.find({
                         $or: [
                             { 'learnSkills': { $in: skillsToLearn.map(skill => skill._id) } },
                             { 'teachSkills': { $in: skillsToTeach.map(skill => skill._id) } },
-                        ],
-                        _id: { $ne: currentUser.id },
+                        ]
                     })
                     .populate('teachSkills learnSkills posts');
                 })
                 .then((matchedUsers) => {
                     matchedUsers.push(currentUser)
                     const matchedUsersIds = matchedUsers.map((user) => user._id);
-                    
+
                     return Post.find({ user: { $in: matchedUsersIds } })
                         .populate('user')
-                        .lean()
                         .then((posts) => {
                             res.json(posts)
                         })
@@ -115,6 +113,10 @@ module.exports.getFriendPosts = (req, res, next) => {
                 }
                 return ids;
             }, []);
+
+            if (!friendIds.includes(req.currentUser)) {
+                friendIds.push(req.currentUser);
+            }
 
             return Post.find({ user: { $in: friendIds } })
                 .populate('user')
