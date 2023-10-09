@@ -1,6 +1,7 @@
 const Post = require('../models/post.model');
 const User = require('../models/user.model');
-const Skill = require('../models/skill.model')
+const Skill = require('../models/skill.model');
+const FriendRequest = require('../models/friendRequest.model')
 
 module.exports.createPost = (req, res, next) => {
     const postData = {
@@ -22,7 +23,6 @@ module.exports.deletePost = (req, res, next) => {
 
     Post.findByIdAndDelete(id)
         .then((rating) => {
-            console.log('post borrado')
             res.status(204).json({ status: "ok" })
         })
         .catch(next)
@@ -46,7 +46,6 @@ module.exports.editPost = (req, res, next) => {
         user: req.currentUser,
         date: new Date()
     }
-    console.log(postData)
 
     Post.findByIdAndUpdate(id, postData)
         .then((post) => {
@@ -68,17 +67,12 @@ module.exports.getTimelinePosts = (req, res, next) => {
             const teachSkillCategories = currentUser.teachSkills.map(skill => skill.category);
             const learnSkillCategories = currentUser.learnSkills.map(skill => skill.category);
 
-            console.log(teachSkillCategories)
-            console.log(learnSkillCategories)
-
             // Utiliza Promise.all para esperar a que ambas consultas se completen
             Promise.all([
                 Skill.find({ 'category': { $in: teachSkillCategories } }),
                 Skill.find({ 'category': { $in: learnSkillCategories} })
             ])
                 .then(([skillsToLearn, skillsToTeach]) => {
-                    console.log(skillsToLearn)
-                    console.log(skillsToTeach)
                     return User.find({
                         $or: [
                             { 'learnSkills': { $in: skillsToLearn.map(skill => skill._id) } },
@@ -89,10 +83,8 @@ module.exports.getTimelinePosts = (req, res, next) => {
                     .populate('teachSkills learnSkills posts');
                 })
                 .then((matchedUsers) => {
-                    console.log(matchedUsers)
                     matchedUsers.push(currentUser)
                     const matchedUsersIds = matchedUsers.map((user) => user._id);
-                    console.log(matchedUsersIds);
                     
                     return Post.find({ user: { $in: matchedUsersIds } })
                         .populate('user')
@@ -111,4 +103,28 @@ module.exports.getTimelinePosts = (req, res, next) => {
             next(error);
         });
 };
+
+module.exports.getFriendPosts = (req, res, next) => {
+    FriendRequest.find({ $or: [{ userSend: req.currentUser }, { userReceive: req.currentUser }], status: 'accepted' })
+        .then((friendRequests) => {
+            const friendIds = friendRequests.reduce((ids, request) => {
+                if (request.userSend.toString() === req.currentUser) {
+                    ids.push(request.userReceive);
+                } else {
+                    ids.push(request.userSend);
+                }
+                return ids;
+            }, []);
+
+            return Post.find({ user: { $in: friendIds } })
+                .populate('user')
+                .then((posts) => {
+                    res.json(posts)
+                })
+        })
+        .catch((err) => {
+            console.log(err)
+            res.status(500).json({ error: 'Error al obtener los posts de amigos.' });
+        })
+}
 

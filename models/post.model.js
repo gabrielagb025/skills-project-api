@@ -13,6 +13,9 @@ const postSchema = new mongoose.Schema({
     multimedia: [{
         type: String
     }],
+    type: {
+        type: String
+    },
     date: {
         type: Date,
         default: Date.now,
