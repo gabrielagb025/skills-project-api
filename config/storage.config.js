@@ -12,7 +12,7 @@ cloudinary.config({
     cloudinary: cloudinary,
     params: {
       folder: "skills/project",
-      allowedFormats: ["jpg", "png"],
+      allowedFormats: ["jpg", "png", "pdf", "mp4", "webm", "ogg", "mp3", "wav", "mov"],
     },
   });
   

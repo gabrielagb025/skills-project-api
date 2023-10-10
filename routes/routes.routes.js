@@ -6,7 +6,8 @@ const usersController = require('../controllers/users.controller');
 const skillController = require('../controllers/skill.controller');
 const ratingController = require('../controllers/rating.controller');
 const postController = require('../controllers/post.controller');
-const friendRequestController = require('../controllers/friendRequest.controller')
+const friendRequestController = require('../controllers/friendRequest.controller');
+const messageController = require('../controllers/message.controller');
 
 /* MISC */
 router.get('/', (req, res, next) => {
@@ -48,5 +49,8 @@ router.get('/friend-requests/pending', authMiddleware.isAuthenticated, friendReq
 router.delete('/friend-request/delete/:id', authMiddleware.isAuthenticated, friendRequestController.cancelFriendRequest);
 router.post('/friend-request/:id', authMiddleware.isAuthenticated, friendRequestController.sendFriendRequest);
 router.get('/friend-request/accepted/:id', authMiddleware.isAuthenticated, friendRequestController.getAcceptedFriendRequest);
+
+/* MESSAGES */
+router.post('/message/create', authMiddleware.isAuthenticated, messageController.createMessage);
 
 module.exports = router;
