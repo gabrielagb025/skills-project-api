@@ -2,6 +2,7 @@ const User = require('../models/user.model');
 const { StatusCodes } = require('http-status-codes');
 const createError = require('http-errors');
 const jwt = require('jsonwebtoken');
+const sendValidationEmail = require('../config/nodemailer.config');
 
 module.exports.register = (req, res, next) => {
     
@@ -11,7 +12,10 @@ module.exports.register = (req, res, next) => {
     }
 
     User.create(userData)
-    .then(user => res.status(StatusCodes.CREATED).json(user))
+    .then(user => {
+        sendValidationEmail(user)
+        res.status(StatusCodes.CREATED).json(user)
+    })
     .catch(next)
 }
 

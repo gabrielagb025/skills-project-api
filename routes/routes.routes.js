@@ -53,10 +53,12 @@ router.get('/friend-request/accepted/:id', authMiddleware.isAuthenticated, frien
 
 /* MESSAGES */
 router.post('/message/create/:id', authMiddleware.isAuthenticated, messageController.createMessage);
+router.patch('/message/read/:id', authMiddleware.isAuthenticated, messageController.messageRead);
 
 /* CHAT */
 router.get('/chats', authMiddleware.isAuthenticated, chatController.getAllChats);
 router.post('/chat/create/:id', authMiddleware.isAuthenticated, chatController.createChat);
+router.delete('/chat/delete/:id', authMiddleware.isAuthenticated, chatController.deleteChat);
 router.get('/chat/:id', authMiddleware.isAuthenticated, chatController.getCurrentChat);
 
 module.exports = router;
