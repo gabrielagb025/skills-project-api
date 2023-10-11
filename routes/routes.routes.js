@@ -8,6 +8,7 @@ const ratingController = require('../controllers/rating.controller');
 const postController = require('../controllers/post.controller');
 const friendRequestController = require('../controllers/friendRequest.controller');
 const messageController = require('../controllers/message.controller');
+const chatController = require('../controllers/chat.controller');
 
 /* MISC */
 router.get('/', (req, res, next) => {
@@ -51,6 +52,11 @@ router.post('/friend-request/:id', authMiddleware.isAuthenticated, friendRequest
 router.get('/friend-request/accepted/:id', authMiddleware.isAuthenticated, friendRequestController.getAcceptedFriendRequest);
 
 /* MESSAGES */
-router.post('/message/create', authMiddleware.isAuthenticated, messageController.createMessage);
+router.post('/message/create/:id', authMiddleware.isAuthenticated, messageController.createMessage);
+
+/* CHAT */
+router.get('/chats', authMiddleware.isAuthenticated, chatController.getAllChats);
+router.post('/chat/create/:id', authMiddleware.isAuthenticated, chatController.createChat);
+router.get('/chat/:id', authMiddleware.isAuthenticated, chatController.getCurrentChat);
 
 module.exports = router;

@@ -8,6 +8,10 @@ const messageSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
     },
+    chat: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Chat'
+    },
     date: {
         type: Date,
         default: Date.now()
