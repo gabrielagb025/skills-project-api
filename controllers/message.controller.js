@@ -23,7 +23,8 @@ module.exports.createMessage = (req, res, next) => {
 }
 
 module.exports.messageRead = (req, res, next) => {
-    Message.findByIdAndUpdate(req.params.id, { status: read }, { new: true })
+    const readStatus = 'read'
+    Message.findByIdAndUpdate(req.params.id, { status: readStatus }, { new: true })
         .then((message) => {
             res.json(message)
         })
