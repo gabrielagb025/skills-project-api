@@ -37,6 +37,8 @@ mongoose.connection.once('open', () => {
                 learnSkills: learnIds
             }
 
+            console.log(modifiedUser)
+
             return User.create(modifiedUser)
         })
 
@@ -49,7 +51,7 @@ mongoose.connection.once('open', () => {
         return mongoose.connection.close();
     })
     .then(() => {
-        console.log('Connectilon cosed.')
+        console.log('Connection closed.')
     })
     .catch((err) => {
         console.log(err)

@@ -2,7 +2,7 @@ const User = require('../models/user.model');
 const { StatusCodes } = require('http-status-codes');
 const createError = require('http-errors');
 const jwt = require('jsonwebtoken');
-const sendValidationEmail = require('../config/nodemailer.config');
+const { sendValidationEmail } = require('../config/nodemailer.config');
 
 module.exports.register = (req, res, next) => {
     
@@ -48,6 +48,17 @@ module.exports.login = (req, res, next) => {
         
         res.json({ accessToken: token })
         })
+    })
+    .catch(next)
+}
+
+module.exports.activateUser = (req, res, next) => {
+    const { id } = req.params;
+
+    User.findByIdAndUpdate(id, { active: true }, { new: true })
+    .then((user) => {
+        console.log(user)
+        res.json(user)
     })
     .catch(next)
 }

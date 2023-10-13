@@ -27,12 +27,16 @@ const userSchema = new mongoose.Schema(
             type: String,
             default: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/1200px-Default_pfp.svg.png"
         },
-        description: {
-            type: String,
-            maxLength: [300, 'La descripción debe tener máximo 300 caracteres.']
-        },
         city: {
             type: String
+        },
+        active: {
+            type: Boolean,
+            default: false
+        },
+        phone: {
+            type: String,
+            required: [true, 'El teléfono es requerido']
         },
         teachSkills: [{
             type: mongoose.Schema.Types.ObjectId,
@@ -81,14 +85,14 @@ userSchema.methods.checkPassword = function (passwordToCheck) {
 }
 
 userSchema.virtual("posts", {
-    ref:"Post",
+    ref: "Post",
     localField: "_id",
     foreignField: "user",
     justOne: false,
 });
 
 userSchema.virtual("friendRequest", {
-    ref:"FriendRequest",
+    ref: "FriendRequest",
     localField: "_id",
     foreignField: "user",
     justOne: false,

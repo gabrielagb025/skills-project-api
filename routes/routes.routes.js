@@ -16,8 +16,9 @@ router.get('/', (req, res, next) => {
 })
 
 /* AUTH */
-router.post('/register', upload.single('avatar'), authController.register)
+router.post('/register', upload.single('avatar'), authController.register);
 router.post('/login', authController.login);
+router.get('/activate/:id', authController.activateUser);
 
 /* USERS */
 router.get('/users/me', authMiddleware.isAuthenticated, usersController.getCurrentUser);
