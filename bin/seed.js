@@ -37,8 +37,6 @@ mongoose.connection.once('open', () => {
                 learnSkills: learnIds
             }
 
-            console.log(modifiedUser)
-
             return User.create(modifiedUser)
         })
 

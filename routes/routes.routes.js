@@ -9,6 +9,7 @@ const postController = require('../controllers/post.controller');
 const friendRequestController = require('../controllers/friendRequest.controller');
 const messageController = require('../controllers/message.controller');
 const chatController = require('../controllers/chat.controller');
+const descriptionController = require('../controllers/description.controller');
 
 /* MISC */
 router.get('/', (req, res, next) => {
@@ -26,6 +27,12 @@ router.patch('/currentUser/edit', authMiddleware.isAuthenticated, upload.single(
 router.get('/users', usersController.getUsers);
 router.get('/users/filtered', authMiddleware.isAuthenticated, usersController.getFilteredUsers);
 router.get('/user/detail/:id', usersController.getUserDetail);
+
+/* DESCRIPTIONS */
+router.post('/description/create', authMiddleware.isAuthenticated, upload.array('images'), descriptionController.createDescription);
+router.get('/description/me', authMiddleware.isAuthenticated, descriptionController.currentUserDescription);
+router.patch('/description/edit/:id', authMiddleware.isAuthenticated, upload.array('images'), descriptionController.editDescription);
+router.get('/description/:id', authMiddleware.isAuthenticated, descriptionController.getUserDescription);
 
 /* SKILLS */
 router.get('/skills', skillController.getSkills)
