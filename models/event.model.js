@@ -1,20 +1,24 @@
 const mongoose = require('mongoose');
 
-const descriptionSchema = new mongoose.Schema({
-    user: {
+const eventSchema = new mongoose.Schema({
+    users: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
-    },
-    description: {
+    }],
+    title: {
         type: String,
         required: true
     },
-    images: [{
-        type: String
-    }],
-    urls: [{
-        type: String
-    }]
+    dateStart: {
+        type: Date,
+        default: Date.now(),
+        required: true
+    },
+    dateEnd: {
+        type: Date,
+        default: Date.now(),
+        required: true
+    },
 },
 {
     timestamps: true,
@@ -29,6 +33,6 @@ const descriptionSchema = new mongoose.Schema({
     }
 })
 
-const Description = mongoose.model('Description', descriptionSchema);
+const Event = mongoose.model('Event', eventSchema);
 
-module.exports = Description;
+module.exports = Event;

@@ -21,16 +21,17 @@ module.exports.register = (req, res, next) => {
 
 module.exports.login = (req, res, next) => {
     const loginError = createError(StatusCodes.UNAUTHORIZED, 'Correo o contraseña inválido.')
+    const activeError = createError(StatusCodes.UNAUTHORIZED, 'Cuenta no activada. Revisa tu correo.')
     const { email, password } = req.body;
 
     if(!email || !password) {
         return next(loginError)
     }
 
-    User.findOne({ email })
+    User.findOne({ email, active: true })
     .then((user) => {
         if(!user) {
-            return next(loginError)
+            return next(activeError)
         }
 
         return user.checkPassword(password)

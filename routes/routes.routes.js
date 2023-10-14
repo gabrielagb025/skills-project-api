@@ -10,6 +10,7 @@ const friendRequestController = require('../controllers/friendRequest.controller
 const messageController = require('../controllers/message.controller');
 const chatController = require('../controllers/chat.controller');
 const descriptionController = require('../controllers/description.controller');
+const eventController = require('../controllers/event.controller');
 
 /* MISC */
 router.get('/', (req, res, next) => {
@@ -68,5 +69,10 @@ router.get('/chats', authMiddleware.isAuthenticated, chatController.getAllChats)
 router.post('/chat/create/:id', authMiddleware.isAuthenticated, chatController.createChat);
 router.delete('/chat/delete/:id', authMiddleware.isAuthenticated, chatController.deleteChat);
 router.get('/chat/:id', authMiddleware.isAuthenticated, chatController.getCurrentChat);
+
+/* EVENTS */
+router.post('/event/create/:id', authMiddleware.isAuthenticated, eventController.createEvent);
+router.get('/event/list', authMiddleware.isAuthenticated, eventController.getCurrentUserEvents);
+router.delete('/event/delete/:id', authMiddleware.isAuthenticated, eventController.deleteEvent);
 
 module.exports = router;
