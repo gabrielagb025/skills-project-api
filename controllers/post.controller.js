@@ -6,7 +6,7 @@ const FriendRequest = require('../models/friendRequest.model')
 module.exports.createPost = (req, res, next) => {
     const postData = {
         ...req.body,
-        multimedia: req.files ? req.files.map(file => file.path) : undefined,
+        images: req.files ? req.files.map(file => file.path) : undefined,
         user: req.currentUser,
         date: new Date()
     }
@@ -42,7 +42,7 @@ module.exports.editPost = (req, res, next) => {
 
     const postData = {
         ...req.body,
-        multimedia: req.files ? req.files.map(file => file.path) : undefined,
+        images: req.files ? req.files.map(file => file.path) : undefined,
         user: req.currentUser,
         date: new Date()
     }
