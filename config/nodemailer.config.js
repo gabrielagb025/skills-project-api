@@ -1,4 +1,5 @@
 const nodemailer = require('nodemailer');
+const emailWelcome = require('../misc/mail')
 
 const email = process.env.EMAIL_ACCOUNT;
 
@@ -14,19 +15,13 @@ module.exports.sendValidationEmail = (user) => {
 
     const activationLink = `${process.env.APPFRONT_HOST}/activate/${user.id}`;
 
-    const userData = {
-        name: user.name 
-    };
+    const userName = user.name;
 
     transporter.sendMail({
         from: `SkillSync <${email}>`,
         to: user.email,
         subject: 'Te damos la bienvenida a SkillSync',
-        html: `
-            <h1>Hola ${userData.name}</h1>
-            <p>Gracias por registrarte en SkillSync. Para activar tu cuenta, haz click en el siguiente enlace:</p>
-            <a href="${activationLink}">Activar cuenta</a>
-        `
+        html: emailWelcome(userName, activationLink)
     })
     .then(() => {
         console.log(`Email sent to ${user.id}`)
