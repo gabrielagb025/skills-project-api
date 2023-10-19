@@ -41,7 +41,7 @@ module.exports.listRatings = (req, res, next) => {
 module.exports.getCurrentUserRatings = (req, res, next) => {
 
     Rating.find({user: req.currentUser})
-    .populate('user')
+    .populate('currentUser')
         .then((ratings) => {
             res.json(ratings)
         })
