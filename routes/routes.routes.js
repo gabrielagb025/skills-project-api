@@ -40,6 +40,7 @@ router.get('/skills', skillController.getSkills)
 
 /* RATINGS */
 router.get('/rating/list/:id', authMiddleware.isAuthenticated, ratingController.listRatings);
+router.get('/rating/me', authMiddleware.isAuthenticated, ratingController.getCurrentUserRatings);
 router.post('/rating/create/:id', authMiddleware.isAuthenticated, ratingController.createRating);
 router.delete('/rating/delete/:id', authMiddleware.isAuthenticated, ratingController.deleteRating);
 

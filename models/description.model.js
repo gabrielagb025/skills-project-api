@@ -9,9 +9,9 @@ const descriptionSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    images: [{
-        type: String
-    }],
+    // images: [{
+    //     type: String
+    // }],
     urls: [{
         type: String
     }]

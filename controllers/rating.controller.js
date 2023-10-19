@@ -37,3 +37,13 @@ module.exports.listRatings = (req, res, next) => {
         })
         .catch(next)
 }
+
+module.exports.getCurrentUserRatings = (req, res, next) => {
+
+    Rating.find({user: req.currentUser})
+    .populate('user')
+        .then((ratings) => {
+            res.json(ratings)
+        })
+        .catch(next)
+}
