@@ -46,6 +46,8 @@ router.delete('/rating/delete/:id', authMiddleware.isAuthenticated, ratingContro
 /* POSTS */
 router.get('/post/list', authMiddleware.isAuthenticated, postController.getCurrentUserPosts);
 router.get('/post/timeline/foryou', authMiddleware.isAuthenticated, postController.getTimelinePosts);
+router.get('/posts', authMiddleware.isAuthenticated, postController.getAllPosts);
+router.get('/posts/:id', authMiddleware.isAuthenticated, postController.getUserPosts);
 router.post('/post/create', authMiddleware.isAuthenticated, upload.array('multimedia'), postController.createPost);
 router.patch('/post/edit/:id', authMiddleware.isAuthenticated, upload.array('multimedia'), postController.editPost);
 router.delete('/post/delete/:id', authMiddleware.isAuthenticated, postController.deletePost);

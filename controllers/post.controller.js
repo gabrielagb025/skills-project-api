@@ -31,6 +31,7 @@ module.exports.deletePost = (req, res, next) => {
 module.exports.getCurrentUserPosts = (req, res, next) => {
     const user = req.currentUser
     Post.find({ user: user })
+    .populate('user')
         .then((posts) => {
             res.json(posts)
         })
@@ -128,5 +129,25 @@ module.exports.getFriendPosts = (req, res, next) => {
             console.log(err)
             res.status(500).json({ error: 'Error al obtener los posts de amigos.' });
         })
+}
+
+module.exports.getAllPosts = (req, res, next) => {
+    Post.find()
+        .populate('user')
+        .then((posts) => {
+            res.json(posts)
+        })
+        .catch(next)
+}
+
+module.exports.getUserPosts = (req, res, next) => {
+    const { id } = req.params;
+
+    Post.find({ user: id })
+        .populate('user')
+        .then((posts) => {
+            res.json(posts)
+        })
+        .catch(next)
 }
 
